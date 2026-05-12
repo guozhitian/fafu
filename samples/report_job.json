@@ -1,0 +1,7 @@
+{
+  "report_title": "运营周报",
+  "report_type": "weekly",
+  "anchor_date": "2026-04-27",
+  "source_dir": "./samples/report_data",
+  "output_dir": "./outputs/report"
+}

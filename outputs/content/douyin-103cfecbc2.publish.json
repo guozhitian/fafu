@@ -1,0 +1,20 @@
+{
+  "content_id": "douyin-103cfecbc2",
+  "platform": "douyin",
+  "published_at": "2026-04-27T12:23:19.028Z",
+  "title": "春季新品上线，通勤和出游都能穿",
+  "copy": "这次上新的轻量外套兼顾舒适和版型，适合通勤、出游和日常叠穿。评论区回复“资料”可领取完整搭配清单。",
+  "hashtags": [
+    "春季穿搭",
+    "新品上线",
+    "轻量外套"
+  ],
+  "media": [
+    "./samples/assets/look-01.jpg",
+    "./samples/assets/look-02.jpg"
+  ],
+  "verification": {
+    "asset_count": 2,
+    "title_length": 15
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "session_id": "cs-20260427-001",
+  "session_context": "客户问退款什么时候到账，语气比较着急，希望尽快有人跟进。",
+  "knowledge_base_path": "./samples/knowledge_base.json",
+  "output_dir": "./outputs/reply"
+}

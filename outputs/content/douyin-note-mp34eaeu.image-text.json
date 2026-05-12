@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "content_id": "douyin-note-mp34eaeu",
+  "platform": "douyin",
+  "publish_type": "image_text",
+  "status": "packaged",
+  "title": "牙齿不齐，先别急着选牙套",
+  "body": "牙齿拥挤、龅牙、牙缝大，方案会受牙齿基础、咬合和预算影响。先做一次口腔检查，再判断适合哪类矫正方式。评论或私信回复“预约”，帮你安排到店评估。",
+  "hashtags": [
+    "口腔健康",
+    "牙齿矫正",
+    "同城口腔",
+    "牙齿护理"
+  ],
+  "images": [],
+  "image_prompt": "Douyin dental clinic image-text carousel, orthodontic consultation topic, warm professional clinic, clean smile, trustworthy local dental care, no scary procedure, no exaggerated before-after, 4:5 vertical composition.",
+  "lead_router": {
+    "lead_needed": true,
+    "lead_type": "comment_or_dm_keyword",
+    "source_platform": "douyin",
+    "keyword": "预约"
+  },
+  "created_at": "2026-05-12T21:05:52.182Z"
+}

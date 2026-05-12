@@ -1,0 +1,11 @@
+{
+  "name": "fafu-workflows",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Runnable workflow wrappers for report generation, auto reply, and content publishing.",
+  "scripts": {
+    "frontend": "node frontend/server.js",
+    "report": "node workflows/report_workflow.js samples/report_job.json",
+    "content": "node workflows/content_workflow.js samples/content_job.json"
+  }
+}

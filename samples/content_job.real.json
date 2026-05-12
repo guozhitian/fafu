@@ -1,0 +1,12 @@
+{
+  "title": "春季新品上线，通勤和出游都能穿",
+  "copy": "这次上新的轻量外套兼顾舒适和版型，适合通勤、出游和日常叠穿。评论区回复“资料”可领取完整搭配清单。",
+  "hashtags": ["春季穿搭", "新品上线", "轻量外套"],
+  "media": ["./samples/assets/look-01.jpg", "./samples/assets/look-02.jpg"],
+  "platform": "douyin",
+  "publish_provider": "generic_api",
+  "intent": "用户想获取资料并进一步咨询穿搭方案",
+  "session_context": "作品发布后，若用户在评论区索要清单或咨询购买方式，需要引导留资。",
+  "reply_guard": {},
+  "output_dir": "./outputs/content"
+}

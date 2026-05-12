@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "provider": "nanobanana2-placeholder",
+  "status": "generated_placeholder",
+  "prompt": "Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 1: educational infographic layout about the topic, clean charts, icons, and key points. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover.",
+  "prompts": [
+    "Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 1: educational infographic layout about the topic, clean charts, icons, and key points. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover.",
+    "Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 2: oral-health science poster style, clear visual hierarchy, commercial Chinese social cover. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover.",
+    "Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 3: premium dental clinic interior with warm reception and clean smile branding. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover."
+  ],
+  "model": "google/gemini-3.1-flash-image-preview",
+  "images": [
+    {
+      "id": "nanobanana2-placeholder-mp34a1og-1",
+      "type": "placeholder",
+      "model": "google/gemini-3.1-flash-image-preview",
+      "prompt": "Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 1: educational infographic layout about the topic, clean charts, icons, and key points. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover.",
+      "file_path": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\content\\generated-images\\2026-05-13\\01-nanobanana2-placeholder-mp34a1og-1.svg",
+      "public_path": "/generated-images/2026-05-13/01-nanobanana2-placeholder-mp34a1og-1.svg"
+    },
+    {
+      "id": "nanobanana2-placeholder-mp34a1og-2",
+      "type": "placeholder",
+      "model": "google/gemini-3.1-flash-image-preview",
+      "prompt": "Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 2: oral-health science poster style, clear visual hierarchy, commercial Chinese social cover. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover.",
+      "file_path": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\content\\generated-images\\2026-05-13\\02-nanobanana2-placeholder-mp34a1og-2.svg",
+      "public_path": "/generated-images/2026-05-13/02-nanobanana2-placeholder-mp34a1og-2.svg"
+    },
+    {
+      "id": "nanobanana2-placeholder-mp34a1og-3",
+      "type": "placeholder",
+      "model": "google/gemini-3.1-flash-image-preview",
+      "prompt": "Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 3: premium dental clinic interior with warm reception and clean smile branding. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover.",
+      "file_path": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\content\\generated-images\\2026-05-13\\03-nanobanana2-placeholder-mp34a1og-3.svg",
+      "public_path": "/generated-images/2026-05-13/03-nanobanana2-placeholder-mp34a1og-3.svg"
+    }
+  ]
+}

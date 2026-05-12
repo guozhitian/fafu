@@ -1,0 +1,105 @@
+{
+  "job": {
+    "report_title": "运营周报",
+    "report_type": "weekly",
+    "anchor_date": "2026-04-27",
+    "source_dir": "./samples/report_data",
+    "output_dir": "./outputs/report"
+  },
+  "range": {
+    "start": "2026-04-21",
+    "end": "2026-04-27"
+  },
+  "summary": {
+    "totals": {
+      "views": 8490,
+      "clicks": 954,
+      "leads": 186,
+      "conversions": 42,
+      "revenue": 33000
+    },
+    "metrics": {
+      "ctr": 0.11236749116607773,
+      "leadRate": 0.1949685534591195,
+      "conversionRate": 0.22580645161290322
+    },
+    "perDay": [
+      {
+        "date": "2026-04-21",
+        "views": 1180,
+        "leads": 24,
+        "revenue": 4200
+      },
+      {
+        "date": "2026-04-22",
+        "views": 1350,
+        "leads": 29,
+        "revenue": 5100
+      },
+      {
+        "date": "2026-04-23",
+        "views": 980,
+        "leads": 18,
+        "revenue": 3200
+      },
+      {
+        "date": "2026-04-24",
+        "views": 620,
+        "leads": 16,
+        "revenue": 2800
+      },
+      {
+        "date": "2026-04-25",
+        "views": 1490,
+        "leads": 33,
+        "revenue": 6100
+      },
+      {
+        "date": "2026-04-26",
+        "views": 1240,
+        "leads": 27,
+        "revenue": 4700
+      },
+      {
+        "date": "2026-04-27",
+        "views": 1630,
+        "leads": 39,
+        "revenue": 6900
+      }
+    ],
+    "topChannels": [
+      {
+        "channel": "douyin",
+        "views": 5650,
+        "leads": 125,
+        "revenue": 22300
+      },
+      {
+        "channel": "xiaohongshu",
+        "views": 2220,
+        "leads": 45,
+        "revenue": 7900
+      },
+      {
+        "channel": "wechat",
+        "views": 620,
+        "leads": 16,
+        "revenue": 2800
+      }
+    ],
+    "recordCount": 7
+  },
+  "publish_result": {
+    "success": true,
+    "data": {
+      "publish_status": "success",
+      "receipt": {
+        "target": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\report",
+        "provider_status": "saved",
+        "report_path": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\report\\weekly-2026-04-27-report.md",
+        "chart_path": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\report\\weekly-2026-04-27-trend.svg"
+      }
+    },
+    "error": null
+  }
+}

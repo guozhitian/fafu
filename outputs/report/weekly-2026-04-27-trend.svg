@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="320" viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="320" fill="#F8FAFC"/>
+  <text x="40" y="24" font-size="18" font-family="Arial" fill="#0F172A">Views / Revenue Trend</text>
+  <line x1="40" y1="280" x2="680" y2="280" stroke="#CBD5E1"/>
+  <line x1="40" y1="40" x2="40" y2="280" stroke="#CBD5E1"/>
+  
+        <rect x="40" y="128" width="79.42857142857143" height="152" rx="6" fill="#4F46E5" />
+        <text x="79.71428571428572" y="308" font-size="10" text-anchor="middle" fill="#334155">04-21</text>
+      
+        <rect x="131.42857142857144" y="106" width="79.42857142857143" height="174" rx="6" fill="#4F46E5" />
+        <text x="171.14285714285717" y="308" font-size="10" text-anchor="middle" fill="#334155">04-22</text>
+      
+        <rect x="222.85714285714286" y="154" width="79.42857142857143" height="126" rx="6" fill="#4F46E5" />
+        <text x="262.57142857142856" y="308" font-size="10" text-anchor="middle" fill="#334155">04-23</text>
+      
+        <rect x="314.2857142857143" y="200" width="79.42857142857143" height="80" rx="6" fill="#4F46E5" />
+        <text x="354" y="308" font-size="10" text-anchor="middle" fill="#334155">04-24</text>
+      
+        <rect x="405.7142857142857" y="88" width="79.42857142857143" height="192" rx="6" fill="#4F46E5" />
+        <text x="445.42857142857144" y="308" font-size="10" text-anchor="middle" fill="#334155">04-25</text>
+      
+        <rect x="497.14285714285717" y="120" width="79.42857142857143" height="160" rx="6" fill="#4F46E5" />
+        <text x="536.8571428571429" y="308" font-size="10" text-anchor="middle" fill="#334155">04-26</text>
+      
+        <rect x="588.5714285714286" y="70" width="79.42857142857143" height="210" rx="6" fill="#4F46E5" />
+        <text x="628.2857142857142" y="308" font-size="10" text-anchor="middle" fill="#334155">04-27</text>
+      
+  <polyline fill="none" stroke="#F97316" stroke-width="3" points="79.71428571428572,152 171.14285714285717,125 262.57142857142856,183 354,195 445.42857142857144,94 536.8571428571429,137 628.2857142857142,70" />
+  <text x="580" y="50" font-size="12" fill="#F97316">Revenue</text>
+  <text x="580" y="68" font-size="12" fill="#4F46E5">Views</text>
+</svg>

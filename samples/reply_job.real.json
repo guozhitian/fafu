@@ -1,0 +1,7 @@
+{
+  "session_id": "cs-20260427-002",
+  "session_context": "客户咨询发货时效，并希望有人继续跟进订单状态。",
+  "knowledge_base_path": "./samples/knowledge_base.json",
+  "output_dir": "./outputs/reply",
+  "intent": "说明发货时效并引导客户继续沟通"
+}

@@ -1,0 +1,9 @@
+[
+  { "date": "2026-04-21", "channel": "douyin", "views": 1180, "clicks": 126, "leads": 24, "conversions": 5, "revenue": 4200 },
+  { "date": "2026-04-22", "channel": "douyin", "views": 1350, "clicks": 151, "leads": 29, "conversions": 7, "revenue": 5100 },
+  { "date": "2026-04-23", "channel": "xiaohongshu", "views": 980, "clicks": 102, "leads": 18, "conversions": 4, "revenue": 3200 },
+  { "date": "2026-04-24", "channel": "wechat", "views": 620, "clicks": 85, "leads": 16, "conversions": 3, "revenue": 2800 },
+  { "date": "2026-04-25", "channel": "douyin", "views": 1490, "clicks": 170, "leads": 33, "conversions": 8, "revenue": 6100 },
+  { "date": "2026-04-26", "channel": "xiaohongshu", "views": 1240, "clicks": 130, "leads": 27, "conversions": 6, "revenue": 4700 },
+  { "date": "2026-04-27", "channel": "douyin", "views": 1630, "clicks": 190, "leads": 39, "conversions": 9, "revenue": 6900 }
+]

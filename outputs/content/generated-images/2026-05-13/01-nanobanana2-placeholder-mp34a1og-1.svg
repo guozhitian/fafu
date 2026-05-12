@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6fbf8"/>
+      <stop offset="100%" stop-color="#d7e8e0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="92" y="110" width="896" height="1130" rx="42" fill="#ffffff" stroke="#bfd6cb" stroke-width="4"/>
+  <text x="130" y="240" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#173f36">口腔图文封面 1</text>
+  <text x="130" y="330" font-family="Arial, sans-serif" font-size="36" fill="#31564c">Nano Banana 2 Prompt Preview</text>
+  <foreignObject x="130" y="410" width="820" height="520">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,sans-serif;font-size:34px;line-height:1.45;color:#334;word-break:break-word;">Douyin image-text cover for a dental clinic campaign about 牙齿不齐要不要做矫正科普信息图. Service focus: 矫正. Audience: 20-35 岁想改善牙齿形象的同城用户. Offer: 免费初筛评估，私信预约优先安排. Scene 1: educational infographic layout about the topic, clean charts, icons, and key points. The visual scene should match the topic and may be infographic-like, educational, lifestyle-based, or clinic-based as needed. Premium but approachable mainland China aesthetic, local-platform commercial taste, not western stock-photo style. If people appear, they must look like local Chinese people. Do not generate foreign-looking faces. No bloody procedure, no surgery close-up, no exaggerated before-after, no false guarantee. Bright natural light, green and white clinic palette, clean smile, 4:5 vertical composition, high click-through social media cover.</div>
+  </foreignObject>
+  <circle cx="795" cy="1015" r="110" fill="#35b08f" opacity="0.18"/>
+  <path d="M245 960 C360 875, 470 890, 565 980 S760 1100, 880 980" fill="none" stroke="#35b08f" stroke-width="24" stroke-linecap="round"/>
+  <text x="130" y="1165" font-family="Arial, sans-serif" font-size="34" fill="#47645b">Generated placeholder. Configure image API for real output.</text>
+</svg>

@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "tasks": [
+    {
+      "task_id": "publish-task-mp308fu9",
+      "platform": "douyin",
+      "publish_type": "image_text",
+      "status": "scheduled",
+      "scheduled_at": "2026-05-12T19:09:20.658Z",
+      "images_per_post": 1,
+      "images": [
+        {
+          "name": "01-nanobanana2-placeholder-mp307zjc-1.svg",
+          "file_path": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\content\\generated-images\\2026-05-13\\01-nanobanana2-placeholder-mp307zjc-1.svg",
+          "ext": ".svg",
+          "size": 1370,
+          "public_path": "/generated-images/2026-05-13/01-nanobanana2-placeholder-mp307zjc-1.svg",
+          "source": "generated"
+        }
+      ],
+      "title": "矫正图文",
+      "body": "预约到店检查",
+      "hashtags": [
+        "口腔健康"
+      ],
+      "lead_keyword": "预约",
+      "created_at": "2026-05-12T19:09:20.817Z"
+    },
+    {
+      "task_id": "publish-task-mp308fu9",
+      "platform": "douyin",
+      "publish_type": "image_text",
+      "status": "scheduled",
+      "scheduled_at": "2026-05-12T19:39:20.658Z",
+      "images_per_post": 1,
+      "images": [
+        {
+          "name": "02-nanobanana2-placeholder-mp307zjc-2.svg",
+          "file_path": "D:\\MEME-\\ggzzmax\\fafu\\outputs\\content\\generated-images\\2026-05-13\\02-nanobanana2-placeholder-mp307zjc-2.svg",
+          "ext": ".svg",
+          "size": 1370,
+          "public_path": "/generated-images/2026-05-13/02-nanobanana2-placeholder-mp307zjc-2.svg",
+          "source": "generated"
+        }
+      ],
+      "title": "矫正图文",
+      "body": "预约到店检查",
+      "hashtags": [
+        "口腔健康"
+      ],
+      "lead_keyword": "预约",
+      "created_at": "2026-05-12T19:09:20.817Z"
+    }
+  ]
+}

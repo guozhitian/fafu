@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>门店增长工作台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <p class="eyebrow">Dental Growth Console</p>
+          <h1>门店增长工作台</h1>
+        </div>
+        <nav class="top-nav" aria-label="功能导航">
+          <button class="nav-tab is-active" data-page="report" type="button">报表中心</button>
+          <button class="nav-tab" data-page="douyin" type="button">抖音自动回复</button>
+          <button class="nav-tab" data-page="publish" type="button">抖音图文自动发布</button>
+          <button class="nav-tab" data-page="settings" type="button">全局设置</button>
+        </nav>
+      </header>
+
+      <main class="dashboard">
+        <section class="page-view is-active" data-page-view="report">
+          <div class="page-title">
+            <div>
+              <h2>报表中心</h2>
+              <p>把数据可视化大屏和报表录入拆开处理，方便门店日常录入和月底分析。</p>
+            </div>
+            <div class="topbar-actions">
+              <button class="icon-button" id="import-json-btn" title="导入 JSON" type="button">↥</button>
+              <input id="import-json-input" type="file" accept="application/json,.json" hidden />
+              <button class="action-button secondary" id="clear-form-btn" type="button">清空表单</button>
+              <button class="action-button" id="save-record-btn" type="button">新增客户</button>
+            </div>
+          </div>
+
+          <div class="sub-nav" aria-label="报表中心二级导航">
+            <button class="sub-nav-tab is-active" data-report-view="screen" type="button">数据可视化大屏</button>
+            <button class="sub-nav-tab" data-report-view="entry" type="button">报表录入</button>
+          </div>
+
+          <section class="report-layout report-pipeline">
+            <article class="analysis-panel report-screen-block report-subview is-active" data-report-subview="screen" aria-label="数据可视化大屏">
+              <div class="panel-heading">
+                <div>
+                  <h3>数据可视化大屏</h3>
+                  <p>围绕渠道、加微、到店、成交、客单价和流失原因做月度分析。</p>
+                </div>
+              </div>
+
+              <section class="kpi-grid" aria-label="月度统计">
+                <article class="kpi-card"><span>进线总数</span><strong id="kpi-total">0</strong></article>
+                <article class="kpi-card"><span>加微转化率</span><strong id="kpi-wechat-rate">0%</strong></article>
+                <article class="kpi-card"><span>预约到店率</span><strong id="kpi-visit-rate">0%</strong></article>
+                <article class="kpi-card"><span>实际成交率</span><strong id="kpi-deal-rate">0%</strong></article>
+                <article class="kpi-card"><span>客单价均值</span><strong id="kpi-avg">¥0</strong></article>
+              </section>
+
+              <section class="analytics-grid" aria-label="月底分析">
+                <article class="analysis-panel">
+                  <div class="panel-heading compact"><h3>渠道效果</h3><span>进线 / 加微 / 到店 / 成交</span></div>
+                  <div id="channel-analysis" class="analysis-list"></div>
+                </article>
+                <article class="analysis-panel">
+                  <div class="panel-heading compact"><h3>项目咨询占比</h3><span>按意向项目统计</span></div>
+                  <div id="project-analysis" class="bar-list"></div>
+                </article>
+                <article class="analysis-panel">
+                  <div class="panel-heading compact"><h3>流失原因</h3><span>数量及原因统计</span></div>
+                  <div id="loss-analysis" class="bar-list"></div>
+                </article>
+                <article class="analysis-panel">
+                  <div class="panel-heading compact"><h3>意向等级标准</h3><span>可直接写进 Excel 备注</span></div>
+                  <ul class="level-list">
+                    <li><strong>A 高意向</strong><span>7 天内有强烈看牙需求，愿意尽快预约到店。</span></li>
+                    <li><strong>B 中意向</strong><span>有明确牙齿问题，1 个月内可安排到店。</span></li>
+                    <li><strong>C 低意向</strong><span>只是问价格、暂时不急、还在观望对比。</span></li>
+                    <li><strong>D 无意向</strong><span>纯闲聊、同行打探或没有真实需求。</span></li>
+                  </ul>
+                </article>
+              </section>
+            </article>
+
+            <article class="analysis-panel report-entry-block report-subview" data-report-subview="entry" aria-label="报表录入">
+              <div class="panel-heading">
+                <div>
+                  <h3>报表录入</h3>
+                  <p id="form-mode-label">精简快速登记</p>
+                </div>
+                <div class="segmented" role="tablist" aria-label="录入模式">
+                  <button class="segment is-active" data-mode="simple" type="button">精简</button>
+                  <button class="segment" data-mode="full" type="button">完整</button>
+                </div>
+              </div>
+
+              <form id="customer-form" class="customer-form"></form>
+
+              <div class="toolbar">
+                <div class="search-group">
+                  <input id="search-input" type="search" placeholder="搜索姓名、电话、渠道、项目" />
+                  <select id="channel-filter" aria-label="渠道筛选"><option value="">全部渠道</option></select>
+                  <select id="status-filter" aria-label="状态筛选"><option value="">全部状态</option></select>
+                </div>
+                <div class="export-group">
+                  <button class="action-button secondary" id="export-csv-btn" type="button">导出 CSV</button>
+                  <button class="action-button secondary" id="export-excel-btn" type="button">导出 Excel</button>
+                  <button class="action-button secondary" id="export-json-btn" type="button">导出文件</button>
+                </div>
+              </div>
+
+              <div class="table-wrap" aria-label="客户数据表格">
+                <table class="data-table">
+                  <thead><tr id="customer-table-head"></tr></thead>
+                  <tbody id="customer-table-body"></tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="page-view" data-page-view="douyin">
+          <div class="page-title">
+            <div>
+              <h2>抖音自动回复</h2>
+              <p>先生成回复草稿，再人工确认发送，适合初期有人审核的运营流程。</p>
+            </div>
+            <div class="topbar-actions">
+              <button class="action-button secondary" id="refresh-dm-btn" type="button">读取私信</button>
+              <button class="action-button" id="generate-replies-btn" type="button">自动生成未读回复</button>
+            </div>
+          </div>
+
+          <section class="dm-layout">
+            <aside class="dm-config-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>资料与接口</h3>
+                  <p>上传聊天记录、话术 SOP，填写客户 API、输出目录和抖音 agent 路径。</p>
+                </div>
+              </div>
+              <div class="upload-zone">
+                <input id="knowledge-upload" type="file" multiple accept=".txt,.md,.json,.csv,.doc,.docx" />
+                <div id="uploaded-files" class="file-list"></div>
+              </div>
+              <div class="config-form">
+                <label>客户 API Key<input id="client-api-key" type="password" placeholder="DeepSeek / 客户自有模型 Key" /></label>
+                <label>API Base URL<input id="client-api-base" type="url" placeholder="https://api.deepseek.com" /></label>
+                <label>模型名称<input id="client-api-model" type="text" placeholder="deepseek-chat" /></label>
+                <label>输出文件目录<input id="reply-output-path" type="text" value="./outputs/reply" /></label>
+                <label>抖音 Agent 目录<input id="douyin-agent-path" type="text" value="C:\Users\G2002\Desktop\新建文件夹\douyin-auto-agent" /></label>
+                <label>回复策略<textarea id="reply-policy">先礼貌承接，再识别客户意图，优先引导加企微或预约到店；涉及价格时给区间并邀请面诊确认。</textarea></label>
+              </div>
+            </aside>
+
+            <section class="dm-inbox-panel">
+              <div class="dm-tabs" role="tablist" aria-label="私信状态">
+                <button class="dm-tab is-active" data-status="unread" type="button">未读 <span id="count-unread">0</span></button>
+                <button class="dm-tab" data-status="read" type="button">已读 <span id="count-read">0</span></button>
+                <button class="dm-tab" data-status="replied" type="button">已回复 <span id="count-replied">0</span></button>
+              </div>
+              <div id="dm-list" class="dm-list"></div>
+            </section>
+
+            <aside class="dm-review-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>人工检查</h3>
+                  <p>确认单条回复无误后，再完成发送记录。</p>
+                </div>
+              </div>
+              <div id="reply-review" class="reply-review empty-review">请选择一条私信，或先点击“自动生成未读回复”。</div>
+            </aside>
+          </section>
+        </section>
+
+        <section class="page-view" data-page-view="publish">
+          <div class="page-title">
+            <div>
+              <h2>抖音图文自动发布</h2>
+              <p>按“图片生成、素材读取、自动发布任务条”三步完成图文内容生产与排期。</p>
+            </div>
+            <div class="topbar-actions">
+              <button class="action-button secondary" id="generate-post-btn" type="button">生成提示词</button>
+              <button class="action-button secondary" id="generate-image-btn" type="button">生成图片</button>
+              <button class="action-button" id="create-publish-tasks-btn" type="button">创建发布任务</button>
+            </div>
+          </div>
+
+          <div class="sub-nav" aria-label="抖音图文发布二级导航">
+            <button class="sub-nav-tab is-active" data-publish-view="image" type="button">图片生成</button>
+            <button class="sub-nav-tab" data-publish-view="materials" type="button">素材读取</button>
+            <button class="sub-nav-tab" data-publish-view="tasks" type="button">自动发布任务条</button>
+          </div>
+
+          <section class="publish-layout publish-pipeline">
+            <article class="analysis-panel publish-config-panel publish-subview is-active" data-publish-subview="image">
+              <div class="panel-heading">
+                <div>
+                  <h3>图片生成</h3>
+                  <p>用 DeepSeek 生成口腔图文提示词，再调用 Nano Banana 2 生成图片并落到日期文件夹。</p>
+                </div>
+              </div>
+              <div class="config-form">
+                <label>选题关键词<input id="publish-topic" type="text" value="牙齿不齐要不要做矫正" /></label>
+                <div class="field-hint">主题例子：牙齿不齐科普信息图、牙科现场图、种植牙对比讲解图、洗牙护理步骤图</div>
+                <label>口腔项目<input id="publish-project" type="text" value="矫正" /></label>
+                <label>目标人群<input id="publish-audience" type="text" value="20-35 岁想改善牙齿形象的同城用户" /></label>
+                <label>活动/卖点<input id="publish-offer" type="text" value="免费初筛评估，私信预约优先安排" /></label>
+                <label>引流关键词<input id="publish-lead-keyword" type="text" value="预约" /></label>
+                <label>DeepSeek API Key<input id="publish-deepseek-key" type="password" placeholder="可复用自动回复里的 DeepSeek Key" /></label>
+                <label>DeepSeek Base URL<input id="publish-deepseek-base" type="text" value="https://api.deepseek.com" /></label>
+                <label>DeepSeek 模型<input id="publish-deepseek-model" type="text" value="deepseek-chat" /></label>
+                <label>Nano Banana 2 Endpoint<input id="publish-image-endpoint" type="text" value="https://api.ofox.ai/v1/images/generations" /></label>
+                <label>Nano Banana 2 API Key<input id="publish-image-key" type="password" placeholder="nanobanana2 key" /></label>
+                <label>图片模型<input id="publish-image-model" type="text" value="google/gemini-3.1-flash-image-preview" /></label>
+                <label>生成张数<input id="publish-image-count" type="number" min="1" max="18" value="6" /></label>
+                <label>图片提示词<textarea id="publish-image-prompt">Douyin dental clinic image-text carousel, orthodontic consultation topic, warm professional clinic, clean smile, trustworthy local dental care, no scary procedure, no exaggerated before-after, 4:5 vertical composition.</textarea></label>
+                <div id="publish-ai-preview" class="media-preview"></div>
+              </div>
+            </article>
+
+            <article class="analysis-panel publish-material-panel publish-subview" data-publish-subview="materials">
+              <div class="panel-heading">
+                <div>
+                  <h3>素材读取</h3>
+                  <p>可读取上一步的日期素材，也可读取本地文件夹；读取后生成抖音图文标题、正文和话题。</p>
+                </div>
+              </div>
+              <div class="config-form">
+                <label>日期文件夹<input id="publish-material-date" type="date" /></label>
+                <label>本地素材文件夹路径<input id="publish-material-folder" type="text" placeholder="例如 D:\素材\口腔图文" /></label>
+                <label>本地图片补充<input id="publish-local-images" type="file" accept="image/*" multiple /></label>
+                <div class="review-actions">
+                  <button class="action-button secondary" id="load-generated-materials-btn" type="button">读取日期素材</button>
+                  <button class="action-button secondary" id="load-folder-materials-btn" type="button">读取本地文件夹</button>
+                  <button class="action-button" id="generate-copy-btn" type="button">生成发布文案</button>
+                </div>
+                <div id="publish-local-preview" class="media-preview"></div>
+                <label>作品标题<input id="publish-title" type="text" value="牙齿不齐，先别急着选牙套" /></label>
+                <label>正文<textarea id="publish-copy">牙齿拥挤、龅牙、牙缝大，方案会受牙齿基础、咬合和预算影响。先做一次口腔检查，再判断适合哪类矫正方式。评论或私信回复“预约”，帮你安排到店评估。</textarea></label>
+                <label>话题标签<input id="publish-tags" type="text" value="口腔健康,牙齿矫正,同城口腔,牙齿护理" /></label>
+              </div>
+            </article>
+
+            <article class="analysis-panel publish-result-panel publish-subview" data-publish-subview="tasks">
+              <div class="panel-heading">
+                <div>
+                  <h3>自动发布任务条</h3>
+                  <p>按素材、发布时间和每条图片数量，生成自动发布任务队列。</p>
+                </div>
+              </div>
+              <div class="config-form">
+                <label>目标平台<input id="publish-platform" type="text" value="douyin" /></label>
+                <label>开始发布时间<input id="publish-start-at" type="datetime-local" /></label>
+                <label>间隔分钟<input id="publish-interval-minutes" type="number" min="1" value="120" /></label>
+                <label>每条图文图片数<input id="publish-images-per-post" type="number" min="1" max="18" value="3" /></label>
+                <button class="action-button secondary" id="simulate-publish-btn" type="button">生成单条待发布记录</button>
+              </div>
+              <div id="publish-task-list" class="task-list"></div>
+              <div id="publish-result" class="result-box"></div>
+            </article>
+          </section>
+        </section>
+
+        <section class="page-view" data-page-view="settings">
+          <div class="page-title">
+            <div>
+              <h2>全局设置</h2>
+              <p>统一管理 DeepSeek 和生图模型接口，抖音自动回复与抖音图文发布默认复用这里的配置。</p>
+            </div>
+            <div class="topbar-actions">
+              <button class="action-button secondary" id="reset-global-settings-btn" type="button">恢复默认</button>
+              <button class="action-button" id="save-global-settings-btn" type="button">保存设置</button>
+            </div>
+          </div>
+
+          <section class="settings-layout">
+            <article class="analysis-panel settings-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>DeepSeek 配置</h3>
+                  <p>用于自动回复、发布文案生成和图片提示词生成。</p>
+                </div>
+              </div>
+              <div class="config-form">
+                <label>API Key<input id="global-deepseek-key" type="password" placeholder="sk-..." /></label>
+                <label>接口地址<input id="global-deepseek-base" type="url" placeholder="https://api.deepseek.com" /></label>
+                <label>模型名称<input id="global-deepseek-model" type="text" placeholder="deepseek-chat" /></label>
+              </div>
+            </article>
+
+            <article class="analysis-panel settings-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>生图模型配置</h3>
+                  <p>用于抖音图文发布的图片生成，默认预留 Ofox 与 Nano Banana 相关参数。</p>
+                </div>
+              </div>
+              <div class="config-form">
+                <label>API Key<input id="global-image-key" type="password" placeholder="sk-of-..." /></label>
+                <label>接口地址<input id="global-image-endpoint" type="url" placeholder="https://api.ofox.ai/v1/images/generations" /></label>
+                <label>模型名称<input id="global-image-model" type="text" placeholder="google/gemini-3.1-flash-image-preview" /></label>
+              </div>
+            </article>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
